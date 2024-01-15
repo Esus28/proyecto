@@ -1,0 +1,37 @@
+{% extends 'main.html'%}
+
+{% block cabecera %}
+        <title>Administrador</title>
+{% endblock %}
+    
+{% block cuerpo %}
+<h2 id="title">Seccion de administrador</h2>
+    <div class="text-center">
+                <h5>Tabla de almacen.<h5>
+                    <div class="card-body">
+                        <table class="table table-responsive-sm table-striped" id="tbl_doc">
+                            <thead class="thead-inverse">
+                                <tr class="text-center">
+                                    <th>ID</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>N_Piezas</th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                {%for client in lista_almacen%}
+                                  <tr>
+                                    <td>{{admin.id}}</td>
+                                    <td>{{admin.marca}}</td>
+                                    <td>{{admin.modelo}}</td>
+                                    <td>{{admin.piezas}}</td>
+                                    <td> <a href="/crud_juan/{{url_for('eliminar')}}">Eliminar</a>
+                                        <a href="/crud_juan/{{url_for('actualizar')}}">Actualizar</a>
+                                      </td>
+                                </tr>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+                        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'main.html'%}
+
+{% block cabecera %}
+        <title>Telcel</title>
+{% endblock %}
+    
+{% block cuerpo %}
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-2">
+                {% include 'plantillas/navbar.html'%}
+                {% include 'plantillas/publicar-modal.html'%}
+            </div>
+            <div id="contenedor" class="col-3">
+                {% include 'plantillas/formulario.html'%}
+            </div>
+            <div class="col-6" >
+                <h5 class="text-center">Administrar Almacen<h5>
+                    <table class="table table-responsive-sm table-striped">
+                        <thead class="thead-inverse">
+                            <tr class="text-center">
+                                <th>ID</th>
+                                <th>marca</th>
+                                <th>Modelo</th>
+                                <th>Piezas</th>
+                            </tr>
+                        </thead> 
+                        <tbody>
+                            {%for almacen in almacen%}
+                              <tr>
+                                <td>{{almacen.id}}</td>
+                                <td>{{almacen.marca}}</td>
+                                <td>{{almacen.modelo}}</td>
+                                <td>{{almacen.piezas}}</td>
+                                <td> <a href="/crud_juan/{{url_for('eliminar', id = almacen.id)}}">Eliminar</a>
+                                    <button class="btn btn-info mt-4 ues-btn" id="formulario_actualizar" data-bs-toggle="modal" data-bs-target="#actualizar-Registro">Actualizar</button><!--<a href="ues-publicar-modal/">Actualizar</a>-->
+                                  </td>
+
+                              </tr>
+                              
+                            {%endfor%}
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+
+
+    
+    {% endblock %}

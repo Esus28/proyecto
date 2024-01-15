@@ -1,0 +1,58 @@
+.ues-btn{
+    width: 100%;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 1.2rem;  
+    background-color: rgb(20, 0, 244);
+    color: black;
+    border-color: rgb(25, 0, 255);
+    transition-duration: 0.3s;
+}
+
+.ues-btn:hover{
+    background-color: #f3002d;
+    border-color: #0000ff;
+}
+#ues-btn-publicar-modal{
+    background-color: #fa0019;
+    border-color: #ff0000;
+    color: wheat;
+    text-align: center;
+    padding-left: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+#ues-btn-publicar-modal:hover{
+    background-color: #0000fc;
+    border-color: #0800ff;
+}
+
+.ues-info{
+    background-color: #0800ff;
+    border-color:#2200ff;
+
+}
+
+.ues-info:hover{
+    background-color:#ff0000;
+    border-color:#ff0000;
+    
+}
+
+.ues-close{
+    border-color: #ff0000;
+    background-color: #ff0000;
+}
+.ues-close:hover{
+    background-color:#ff0000;
+    border-color:#ff0000;
+}
+#efff{
+    text-align: right;
+}
+#title{
+    text-align: center;
+}
